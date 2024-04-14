@@ -1,10 +1,12 @@
-import Google from "./google";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
+import Dashboard from "./dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <Google />
-    </div>
+    <RouterProvider router={router}>
+      <Dashboard />
+    </RouterProvider>
   );
 }
 
