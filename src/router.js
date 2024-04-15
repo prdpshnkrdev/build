@@ -4,6 +4,7 @@ import Header from "./header";
 import ErrorPage from "./error-page";
 import Google from "./google";
 import Grid from "@mui/material/Grid";
+import Search from "./search";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/google",
         element: <Google />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
     ],
   },
