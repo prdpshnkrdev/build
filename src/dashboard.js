@@ -1,31 +1,24 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 function Dashboard() {
   return (
-    <div className="dashboard">
-      <div>
+    <Grid container flexDirection={"column"}>
+      <Grid item>
         <h2>Welcome to the Dashboard</h2>
         <p>Click on the links above to navigate to different pages.</p>
-      </div>
+      </Grid>
 
-      <div>
-        <button>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            Dashboard
-          </Link>
-        </button>
-        <button>
-          <Link to="/google" style={{ textDecoration: "none" }}>
-            Google
-          </Link>
-        </button>
-      </div>
+      <Link to="/google" style={{ textDecoration: "none" }}>
+        <Button variant="contained">Google</Button>
+      </Link>
 
-      <div>
+      <Grid item>
         <Outlet />
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   );
 }
 
