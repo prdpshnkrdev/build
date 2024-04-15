@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 
 function Google() {
-  // State for the search query
   const [query, setQuery] = useState("");
 
-  // State for the URL of the iframe
   const [url, setUrl] = useState("");
 
-  // Handle form submission
   const handleSearch = (event) => {
     event.preventDefault();
-    // Construct the Google search URL with the query
     const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(
       query
     )}`;
@@ -30,7 +26,6 @@ function Google() {
         <button type="submit">Search</button>
       </form>
       <div style={{ marginTop: "20px" }}>
-        {/* Render the iframe with the Google search results */}
         <iframe
           src={url}
           width="100%"
